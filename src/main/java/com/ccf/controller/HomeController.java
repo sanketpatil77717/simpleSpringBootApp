@@ -21,5 +21,15 @@ public class HomeController {
 		return new ResponseEntity<Employee>(new Employee("Tony", "Stark", "tony@stark.com"), HttpStatus.OK);
 
 	}
+	
+	
+	@GetMapping("/about")
+	public String about() {
+		return "This Project is Simple Spring Boot Application.I have used Jenkins to Build PipeLine."
+				+ "Two Individual EC2 instances have been created and I have installed Jenkins and Tomcat on them."
+				+ "For VCS GitHub is used.";
+	}
+	
+	
 
 }
